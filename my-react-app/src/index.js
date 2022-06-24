@@ -17,7 +17,7 @@ root.render(
         <Route path="/" element={<NavBar />}/>
         <Route path="uploadForm" element={<UploadForm />}/>
         <Route path="gallery" element={<Gallery />}/>
-        <Route path="postDisplay" element={<PostsDisplay />}/> 
+        <Route path="postDisplay/:id" element={<PostsDisplay />}/> 
     </Routes>
   </BrowserRouter>
 )
