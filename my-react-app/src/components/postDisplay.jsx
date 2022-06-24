@@ -30,11 +30,22 @@ const PostsDisplay= ()=>{
     })
    }
 console.log(comments)
+console.log(onePost)
     return(
         <div>
                 <div>
                     <h1>{onePost.title}</h1>
                     <p>{onePost.body}</p>
+                    {comments.map(comment=>{
+                        if(comment.postId===onePost.id){
+                            return(
+                                <ul>
+                                    <li>{comment.name}, {comment.email}</li>
+                                </ul>
+                            )
+                        }
+
+                    })}
                 </div>
           </div>
     )
